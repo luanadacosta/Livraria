@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input{
+    margin: 10px;
+    width: 40%;
+    padding: 15px;
+}
+
+select{
+
+    width: 20%;
+    padding: 15px;
+}
+
+button{
+    padding: 10px;
+    display: grid;
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: rgb(10, 10, 10);
+    color: whitesmoke;
+}
+
+
+label{
+    align-items: center;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}

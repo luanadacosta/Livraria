@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Livraria</title>
+   
 
-    <h1>Gerenciamento de Livros</h1>
-
-    <h3>TItulo</h3>
-    <h3>Categoria</h3>
 </head>
+
 <body>
-  
+    <div class="container">
+       <h1> Gerenciamento de Livros</h1>
+    </div>
+
+    <form action="">
+        <div class="grid">
+        <div>
+            <label for="titulo">Titulo</label>
+            <input type="titulo">
+        </div>
+
+        <div>
+            <label for="autor">Autor</label>
+            <input type="autor">
+        </div>
+
+        <div>
+            <label for="categoria">Categoria</label>
+            <select name="categorias" id="categorias">
+                <option value="drama">Drama</option>
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="drama">Terror</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="valor">Valor</label>
+            <input type="valor">
+        </div>
+
+        </div>
+        <button>cadastrar</button>
+    </form>
+
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
