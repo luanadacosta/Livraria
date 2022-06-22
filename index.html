@@ -19,37 +19,40 @@
 
     <form action="">
         <div class="grid">
-        <div>
-            <label for="titulo">Titulo</label>
-            <input type="titulo">
+        <div class="form-item">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Digite o Título do Livro">
         </div>
 
-        <div>
+        <div class="form-item">
             <label for="autor">Autor</label>
-            <input type="autor">
+            <input type="text" id="autor" name="titulo" placeholder="Digite o Autor do Livro">
         </div>
 
-        <div>
-            <label for="categoria">Categoria</label>
-            <select name="categorias" id="categorias">
+        <div class="form-item">
+            <label for="">Categoria</label>
+            <select name="categoria" id="categoria">
+                <option value="" selected disabled>Selecione a categoria</option>
                 <option value="drama">Drama</option>
                 <option value="acao">Ação</option>
                 <option value="aventura">Aventura</option>
-                <option value="drama">Terror</option>
+                <option value="terror">Terror</option>
             </select>
         </div>
 
-        <div>
-            <label for="valor">Valor</label>
-            <input type="valor">
+        <div class="form-item">
+            <label for="">Valor</label>
+            <input type="text" id="valor" name="valor" placeholder="R$">
         </div>
 
         </div>
-        <button>cadastrar</button>
+        <button type="button">Cadastrar</button>
     </form>
 
 
     <script src="js/script.js"></script>
+
+    
 </body>
 
 </html>
