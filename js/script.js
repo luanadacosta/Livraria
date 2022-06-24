@@ -48,6 +48,23 @@ const cadastrar = () =>{
             'Content-type': 'application/x-www-form-urlencoded'
     }
     })
+
+    //abrindo função, then si teve sucesso faça, então.
+    .then(function(response){
+        response.json()
+        .then(resposta=>{
+            //aqui é onde iremos receber e tratar a resposta do PHP
+            Swal.fire(
+                'Atenção',
+                resposta.Mensagem,
+                'sucess'
+              )
+
+            //resetar o formulario - limpar os campos
+            document.getElementById('form-cadastrar').reset()
+        })
+    })   
+        
     
 
 }
