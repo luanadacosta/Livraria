@@ -30,9 +30,9 @@ try {
 
   //query ver inscrição
   $sql = "INSERT into tb_livros
-          (titulo,categoria,autor,valor)
+          (titulo,id_categorias,autor,valor)
         VALUES
-          ('$titulo','$autor','$categoria',$valor)";
+          ('$titulo',$categoria,'$autor',$valor)";
 
   $comdando = $conexao->prepare($sql);
 
@@ -42,10 +42,12 @@ try {
   $resposta = array("Resposta"=>"Ok","Mensagem"=>"Cadastro realizado com sucesso!");
   //converte o array resposta em JSON
   //JSON_UNESCAPED_UNICODE  = Manter o arquivo com mapa
-  $json = json_encode($resposta,JSON_UNESCAPED_UNICODE);
 
-  echo $json;
   
 } catch (PDOException $e) {
-  echo "Erro: " . $e->getMessage();
+  //aqui é tratado o erro e retornado ao ususario
+  $resposta = array("Resposta"=>"Erro","Mensagem"=>$e->getMessage());
 }
+  $json = json_encode($resposta,JSON_UNESCAPED_UNICODE);
+  //retorno e json convertido
+  echo $json;

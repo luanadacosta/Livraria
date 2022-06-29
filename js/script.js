@@ -57,16 +57,27 @@ const cadastrar = () =>{
             Swal.fire(
                 'Atenção',
                 resposta.Mensagem,
-                'sucess'
-              )
+                resposta.Resposta == "Ok" ? 'success' : 'error')
+            
+        
+            
 
             //resetar o formulario - limpar os campos
             document.getElementById('form-cadastrar').reset()
         })
     })   
-        
-    
-
 }
+
+//final funççao cadastrar
+
+
+//inicio função listar
+const listar = () =>{
+    fetch('backend/listar-livro.php',
+    )}
+
+
+
+//final função listar
 
 
